@@ -1,4 +1,4 @@
-# This is a simple application template for any user to clone build off of for their own projects
+# This is a simple application template for any user to clone build off of for their own projects.
 
 
 ### How to run app
