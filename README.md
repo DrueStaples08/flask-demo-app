@@ -1,4 +1,4 @@
-# This is app 10
+# This is a simple application template for any user to clone build off of for their own projects
 
 
 ### How to run app
