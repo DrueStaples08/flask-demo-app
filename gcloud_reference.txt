@@ -1,0 +1,31 @@
+# Connect GCP VM to VS Code via ssh
+1.) In Terminal, create a ssh key(s)
+ssh-keygen -t rsa -b 4096 -C project-wide-user
+ssh-keygen -t rsa -b 4096 -C local-wide-user
+2.) Open up both public key files ie.  project-wide-user.pub
+3.) Copy the key and go to Compute Engine -> Metadata -> Add SSH keys, then paste them there
+4.) Go to VPC Network -> Firewall -> Add Firewall Rule (available ports are listed e.g. port tdp 22)
+5.) Create a VM via Compute Engine -> VM Instances
+6.) Go to Terminal and connect to VM using the externel ip address and ssh keys 
+ssh -i projectwideuser projectwideuser@ExternalIP
+
+# Create a Kubernetes Cluster (K8)
+1.) Create App
+2.) Create Docker File
+3.) Build Container Image
+4.) Push to Container Registry
+5.) Create Cluster and set node size
+6.) Add a Deployement.yaml and Services.yaml file 
+There are templates for these so just copy them over and edit them to your liking
+7.) Speaking of editing, configure the Deployement to set the number of pods used per node
+8.) Edit the Services.yaml file to whatever you need. This is what interacts with the Load Balancer
+9.) Generate the Pods via Deployment.yaml
+10.) Expose cluster to outside network
+11.) Copy externel IP address from the LoadBalancer and paste it into web browser
+
+# Deploy Docker Container to GCP Network 
+1.) Create App
+2.) Create Docker File
+3.) Build Docker Image
+4.) Push to Container Registry 
+5.) Deploy to Outside Network

@@ -1,0 +1,42 @@
+In order to start a new environment, follow the folowing steps:
+
+1.) If you already have a vm and you want those packages to be copied over, then run the command below to create a file that holds the packages and the versions of each.
+
+$ pip freeze > requirements.txt
+
+
+2.) Copy content into temporary folder - if you dont have one, then just 'mkdir ~/temporary' a new folder 
+
+$ cp requirements.txt ~/temporary
+
+
+3.) Cd into temporary folder
+
+$ cd ~/temporary
+
+
+4.) Create new environment
+
+$ python -m venv venv36
+
+
+5.) Mv requirements file from ~/temporary to ~/temporary/venv36 - This way when you create new vm's, the requirements for each wont get jumbled up
+
+$ mv requirements.txt ~/temporary/venv36 
+
+or 
+
+$ mv requirements.txt venv36 
+(since I'm already located in temporary folder)
+
+
+6.) Activate new vm
+
+$ source ./venv36/bin/activate
+
+
+7.) Install requirements file 
+
+$ pip install -r requirements.txt
+
+For more details follow the instructions here (https://levelup.gitconnected.com/install-multiple-python-versions-in-wsl2-ba81f21109d6)

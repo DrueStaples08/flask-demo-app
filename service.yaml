@@ -1,0 +1,27 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: my-awesome-app
+
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-awesome-app
+  ports:
+  - port: 80
+    targetPort: 8080
+
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: "hello-youtube-gke"
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     app: "hello-youtube-gke"  
+#   ports:
+#   - port: 80
+#   targetPort: 8080
